@@ -1,1 +1,1 @@
-ghqf.github.io
+GHQF.GITHUB.IO
