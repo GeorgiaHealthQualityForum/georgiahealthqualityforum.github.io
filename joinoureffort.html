@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Join Our Effort</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link href="//fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet" type="text/css">
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-panels.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-desktop.css">
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+    <style>
+        body {
+            text-align: left;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .accordion-section {
+            margin-bottom: 20px;
+        }
+
+        .accordion-section h3 {
+            cursor: pointer;
+            text-align: left; /* Added this line for left alignment */
+        }
+
+        .accordion-content {
+            display: none;
+        }
+
+        /* Adjust text alignment for the header and paragraph within the section */
+        #content section header h2,
+        #content section header .byline {
+            text-align: left;
+        }
+
+        #content section p {
+            text-align: left;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".accordion-section h3").click(function () {
+                $(this).next(".accordion-content").slideToggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+
+            <!-- Logo -->
+            <div id="logo">
+                <h1><a href="#">Georgia Health Quality Forum</a></h1>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="The Initiative.html">The Initiative</a></li>
+                    <li><a href="The Team.html">The Team</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="Collaborators.html">Collaborators</a></li>
+                    <li><a href="joinoureffort.html">Join Our Effort</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Content -->
+                    <div id="content" class="8u skel-cell-important">
+                        <section>
+                            <header>
+                                <h2>Join Our Effort</h2>
+                                <span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+                            </header>
+                            <div class="accordion-section">
+                                <h3>Know More</h3>
+                                <div class="accordion-content">
+                                    <p>Content for Accordion Section 1</p>
+                                </div>
+                            </div>
+                            <div class="accordion-section">
+                                <h3>Become a Member of Our Community</h3>
+                                <div class="accordion-content">
+                                    <p>Content for Accordion Section 2</p>
+                                </div>
+                            </div>
+                            <div class="accordion-section">
+                            <h3>Contact Us</h3>
+                            <div class="accordion-content">
+                                <p>For inquiries, please <a href="mailto:your.email@example.com">email us</a>.</p>
+                            </div>
+                        </div>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
