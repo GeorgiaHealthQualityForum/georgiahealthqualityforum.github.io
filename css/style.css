@@ -298,7 +298,8 @@ h6 {
 
 	#logo
 	{
-	}
+         line-height: 1.5;
+	} 
 	
 	#nav
 	{
@@ -382,21 +383,23 @@ h6 {
     } 
 
     .custom-container2 {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      padding: 20px; 
+        display: flex;
+        align-items: center;
+        background-color: white;
+        padding: 100px; 
     }
 
     .custom-container2 .image {
-      flex: 0 0 auto; 
-      margin-right: 20px;
-      max-width: calc(100vw / 6);
+        flex: 0 0 auto; 
+        margin-right: 60px; 
+        max-width: calc(100vw / 6);
     }
 
     .custom-container2 .text {
-      flex: 1; 
-    }
+        flex: 1; 
+        text-align: justify;
+        text-justify: inter-word;
+    } 
 
     .custom-container3 {
         display: flex;
@@ -419,7 +422,7 @@ h6 {
         display: flex;
         align-items: center;
         background-color: white;
-        padding: 20px; 
+        padding: 100px; 
     }
 
     .custom-container4 .image {
