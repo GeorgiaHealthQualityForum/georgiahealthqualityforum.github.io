@@ -396,6 +396,7 @@ h6 {
     }
 
     .custom-container2 .text {
+        font-size: 1.25rem;
         flex: 1; 
         text-align: justify;
         text-justify: inter-word;
@@ -468,6 +469,7 @@ h6 {
     }
 
     .custom-container6 .text {
+      font-size: 1.25rem;
       flex: 1; 
     }
 
@@ -485,6 +487,7 @@ h6 {
     }
 
     .custom-container7 .text {
+      font-size: 1.25rem;
       flex: 1; /* Allow text to take remaining space */
     } 
 
@@ -499,6 +502,7 @@ h6 {
     }
 
     .accordion-title {
+      font-size: 1.25rem;
       background-color: #f1f1f1;
       color: #333;
       cursor: pointer;
@@ -512,6 +516,7 @@ h6 {
     }
 
     .accordion-content {
+      font-size: 1.25rem;
       display: none;
       padding: 15px;
       border-top: 1px solid #ddd;
@@ -627,6 +632,38 @@ h6 {
     .back-button:hover {
         background-color: deepskyblue; */
     }
+
+    #custom-main {
+        text-align: center !important; /* Center align all content */
+        background: white;
+    }
+
+    #custom-content {
+        display: inline-block !important; /* Make the content inline-block to center it */
+        text-align:  center !important; /* Reset text-align to left for content */
+        width: 100% !important;
+    }
+
+    .custom-section {
+        display: inline-block !important; /* Make sections inline-block to align them horizontally */
+        text-align: center !important; /* Reset text-align to left for sections */
+        margin-bottom: 0;
+        width: 100% !important;
+        align-content: center;
+
+    }
+
+    .custom-heading {
+        margin-bottom: 0 !important; /* Remove default margin-bottom for h6 */
+        font-size: 1.5rem !important; /* Set font size for h6 */
+    }
+
+    .custom-image {
+        vertical-align: middle !important; /* Align images vertically in the middle */
+        width: 50px !important; /* Set width for images */
+        height: auto !important; /* Maintain aspect ratio for images */
+        margin-right: 10px !important; /* Add margin to the right of images *
+        }
             
           
 
