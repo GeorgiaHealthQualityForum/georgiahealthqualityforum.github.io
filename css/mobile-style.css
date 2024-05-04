@@ -367,38 +367,34 @@ h6 {
 
     #main .custom-container {
         display: flex;
-        align-items: center;
         background-color: white;
-        padding: 20px; 
+        text-align: center;
     }
 
     #main .custom-container .image {
-        flex: 0 0 auto; 
-        margin-right: 40px; 
-        max-width: calc(70vw / 3);
+        display: none;
     }
 
     #main .custom-container .text {
         flex: 1; 
+        line-height: 2rem;
     } 
 
     .custom-container2 {
         display: flex;
         align-items: center;
         background-color: white;
-        padding: 100px; 
+        padding: 25px; 
     }
 
     .custom-container2 .image {
-        flex: 0 0 auto; 
-        margin-right: 60px; 
-        max-width: calc(100vw / 6);
+        display: none;
     }
 
     .custom-container2 .text {
         font-size: 1.25rem;
         flex: 1; 
-        text-align: justify;
+        text-align: left;
         text-justify: inter-word;
     } 
 
@@ -423,32 +419,28 @@ h6 {
         display: flex;
         align-items: center;
         background-color: white;
-        padding: 100px; 
+        padding: 25px; 
     }
 
     .custom-container4 .image {
-        flex: 0 0 auto; 
-        margin-right: 60px; 
-        max-width: calc(100vw / 6);
+        display: none
     }
 
     .custom-container4 .text {
         flex: 1; 
         text-align: justify;
         text-justify: inter-word;
+        word-spacing: normal;
     } 
 
     .custom-container5 {
         display: flex;
         align-items: center;
         background-color: white;
-        padding: 20px; 
     }
 
     .custom-container5 .image {
-        flex: 0 0 auto;
-        margin-right: 40px;
-        max-width: calc(70vw / 3);
+        display: none
     }
 
     .custom-container5 .text {
@@ -664,4 +656,4 @@ h6 {
         height: auto !important; /* Maintain aspect ratio for images */
         margin-right: 10px !important; /* Add margin to the right of images *
         }
-            
+    
