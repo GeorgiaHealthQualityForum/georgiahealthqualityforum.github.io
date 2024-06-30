@@ -299,6 +299,7 @@ h6 {
 	#logo
 	{
          line-height: 1.5;
+         font-size: 0.5rem ;
 	} 
 	
 	#nav
@@ -315,6 +316,16 @@ h6 {
         {
             color: black !important;
             font-size: 1.1rem !important;
+        }
+
+        #nav ul li a span {
+            background-color: white;
+            padding: 0.5rem;
+        }
+
+        #nav ul li a span:hover {
+            background-color: lightblue;
+            padding: 0.5rem;
         }
 	
         #nav ul li.dropdown:hover .dropdown-content {
