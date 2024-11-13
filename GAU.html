@@ -7,6 +7,126 @@
         <link rel="stylesheet" href="css/style-desktop.css">
         <link rel="stylesheet" href="css/mobile-style.css" media="screen and (max-width: 768px)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+                    .member-grid {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 20px;
+                        text-align: center;
+                    }
+                    .member {
+                        padding: 10px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                    }
+                    .member img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                    }
+                    .member-name {
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+                    .member-title {
+                        color: #333;
+                    }
+                    .membership-header {
+                      color: #808080;
+                      cursor: pointer;
+                      font-size: 1.2em;
+                      padding: 10px;
+                      margin: 0;
+                      background-color: #f4f4f4;
+                      border: 1px solid #ddd;
+                      text-align: center;
+                    }
+                    .membership-content {
+                      display: none;
+                      padding: 15px;
+                      margin-top: 10px;
+                      background-color: #f9f9f9;
+                      border: 1px solid #ddd;
+                    }
+                    .membership-header2 {
+                      color: #808080;
+                      cursor: pointer;
+                      font-size: 1.2em;
+                      padding: 10px;
+                      margin: 0;
+                      background-color: #f4f4f4;
+                      border: 1px solid #ddd;
+                      text-align: center;
+                    }
+                    .membership-content2 {
+                      display: none;
+                      padding: 15px;
+                      margin-top: 10px;
+                      background-color: #f9f9f9;
+                      border: 1px solid #ddd;
+                    }
+                    .big-button-section {
+                        display: flex;
+                        justify-content: center;
+                        margin: 2rem 0;
+                    }
+
+                    .big-button {
+                        display: inline-block;
+                        padding: 1rem 2rem;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        color: #fff;
+                        background-color: #0073e6;
+                        text-align: center;
+                        text-decoration: none;
+                        border-radius: 8px;
+                        transition: background-color 0.3s ease;
+                    }
+
+                    .big-button:hover {
+                        background-color: #005bb5;
+                    }
+            
+                    .popup-overlay {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 1000;
+                    }
+
+                    /* Popup Content */
+                    .popup-content {
+                        position: relative;
+                        background-color: white;
+                        padding: 20px;
+                        max-width: 90%;
+                        max-height: 90%;
+                        overflow-y: auto;
+                    }
+
+                    /* Close Button */
+                    .close-btn {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        font-size: 2rem;
+                        color: #000;
+                        cursor: pointer;
+                    }
+
+                    /* Image inside the popup */
+                    #popup-image {
+                        width: 100%;
+                        height: auto;
+                    }
+                </style>
     </head>
     <body class="homepage">
 
@@ -14,150 +134,246 @@
 		<div id="header">
 			<div class="container"> 
 				
-            <!-- Logo -->
-            <div id="logo">
-                <h1><a href="#">Georgia Health Quality Forum</a></h1>
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="#">Georgia Health Quality Forum</a></h1>
+                </div>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="Initiative.html"><span>The Initiative</span></a></li>
+                        <li><a href="Team.html"><span>The Team</span></a></li>
+                        <li><a href="Resources.html"><span>Resources</span></a></li>
+                        <li><a href="Collaborators.html"><span>Collaborators</span></a></li>
+                        <li><a href="Join.html"><span>Join Our Effort</span></a></li>
+                    </ul>
+                </nav>
             </div>
 
-            <!-- Nav -->
-			<nav id="nav">
-                <ul>
-                    <li><a href="index.html"><span>Home</span></a></li>
-                    <li><a href="Initiative.html"><span>The Initiative</span></a></li>
-                    <li><a href="Team.html"><span>The Team</span></a></li>
-                    <li><a href="Resources.html"><span>Resources</span></a></li>
-                    <li><a href="Collaborators.html"><span>Collaborators</span></a></li>
-                    <li><a href="Join.html"><span>Join Our Effort</span></a></li>
-                </ul>
-            </nav>
-        </div>
+            <div id="button">
+              <button onclick="goBack()" class="back-button">Back</button> 
+            </div>
 
-        <div id="button">
-          <button onclick="goBack()" class="back-button">Back</button> 
-        </div>
-
-		<!-- Main -->
-        <div id="main">
-            <div class="container">
+            <div id="main">
                 <div class="row"> 
                     <!-- Content -->
                     <div id="content" class="12u skel-cell-important">
+                            <section>
+                                <header>
+                                  <a href= https://www.gau.edu.ge/en target="_blank">
+                                    <h2 style="line-height: 3rem">Georgian American University</h2>
+                                  </a>
+                                </header>
+                                <br/><br/>
+                                <p style="font-size: 1.25rem;">IHI Open School GAU Chapter is an interprofessional educational community that works to advance health care improvement and patient safety competencies in the next generation of health professionals. We strive to provide opportunities to learn about quality improvement and improving patient care, network with peers, and connect with engaged and supportive faculty. Our chapter here at GAU gives students the skills to become change agents in health care improvement.
+                                    <br/><br/>In particular, our IHI Open School chapter focuses on interprofessional collaboration and community service-learning. Through our chapter network and provided free online courses students will develop skills and knowledge in quality improvement, patient safety, population health, teamwork, leadership, patient-centered care, and gain confidence and skills in quality and safety to change health care.
+                                    <br/><br/>We are focusing on topics like Leadership, The Triple Aim, Person- and Family-Centered Care, Patient Safety, Quality Improvement, Ethics, and Health Policy. Therefore, assisting students in acquiring an IHI Basic Certificate (Safety and Quality Improvement Micro-Credential that provides students with a solid foundation) and organizing workshops and discussions to help students apply their knowledge, and practice their leadership and teamwork skills. Moreover, we are open to new ideas and we try to shape our activities to students’ interests.
+                                    <br/><br/>Please find our Chapter website here: <a href="https://www.instagram.com/gau_ihi/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/gau_ihi/</a>
+                                </p>
+                                <div class="video-container">
+                                 <iframe src="https://drive.google.com/file/d/11g9strT3hzLwVw7vj2wFrqzFDQBx5ICF/preview" allow="autoplay"></iframe>
+                                </div>
+                        </section> 
+
+                        <!-- Membership Section -->
                         <section>
-                            <header>
-                              <a href= https://www.gau.edu.ge/en target="_blank">
-                                <h2 style="line-height: 3rem">Georgian American University</h2>
-                              </a>
-                            </header>
-                            <br/><br/>
-							<p style="font-size: 1.25rem;">IHI Open School GAU Chapter is an interprofessional educational community that works to advance health care improvement and patient safety competencies in the next generation of health professionals. We strive to provide opportunities to learn about quality improvement and improving patient care, network with peers, and connect with engaged and supportive faculty. Our chapter here at GAU gives students the skills to become change agents in health care improvement.
-								<br/><br/>In particular, our IHI Open School chapter focuses on interprofessional collaboration and community service-learning. Through our chapter network and provided free online courses students will develop skills and knowledge in quality improvement, patient safety, population health, teamwork, leadership, patient-centered care, and gain confidence and skills in quality and safety to change health care.
-								<br/><br/>We are focusing on topics like Leadership, The Triple Aim, Person- and Family-Centered Care, Patient Safety, Quality Improvement, Ethics, and Health Policy. Therefore, assisting students in acquiring an IHI Basic Certificate (Safety and Quality Improvement Micro-Credential that provides students with a solid foundation) and organizing workshops and discussions to help students apply their knowledge, and practice their leadership and teamwork skills. Moreover, we are open to new ideas and we try to shape our activities to students’ interests.
-								<br/><br/>Please find our Chapter website here: <a href="https://www.instagram.com/gau_ihi/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/gau_ihi/</a>
-							</p>
-                            <div class="video-container">
-                             <iframe src="https://drive.google.com/file/d/11g9strT3hzLwVw7vj2wFrqzFDQBx5ICF/preview" allow="autoplay"></iframe>
+                            <h3 style="font-size: 1.5rem;">IHP Student Membership (2025-26)</h3>
+                            <br/>
+                            <div class="member-grid">
+                                <div class="member">
+                                    <img src="images/Salome Oluchukwu Igbokwe. President .jpg" alt="Salome O. Igbokwe">
+                                    <div class="member-name">Salome O. Igbokwe</div>
+                                    <div class="member-title">President</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/Akhila Suresh Dudam. Secretary .jpg" alt="Akhila Suresh Dudam">
+                                    <div class="member-name">Akhila Suresh Dudam</div>
+                                    <div class="member-title">Secretary</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/Shreyas Deepak Patil. Volunteer coordinator.jpg" alt="Shreyas Deepak Patil">
+                                    <div class="member-name">Shreyas Deepak Patil</div>
+                                    <div class="member-title">Director of Collaborations & Volunteer Coordinator</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/Divya Haswani. Social media team .jpg" alt="Divya Haswani">
+                                    <div class="member-name">Divya Haswani</div>
+                                    <div class="member-title">Social Media Team</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/Ganesh Chandrasekhar. Social media team .jpg" alt="Ganesh Chandrashekar">
+                                    <div class="member-name">Ganesh Chandrashekar</div>
+                                    <div class="member-title">Social Media Team</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/Dhanashree Subhash Jadhav. Administrative committee .jpg" alt="Dhanashree Subhash Jadhav">
+                                    <div class="member-name">Dhanashree Subhash Jadhav</div>
+                                    <div class="member-title">Director of Events</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/Ifreen Imdad Husain Qureshi. Administrative committee .jpg" alt="Ifreen Imdad Husain Qureshi">
+                                    <div class="member-name">Ifreen Imdad Husain Qureshi</div>
+                                    <div class="member-title">Director of Events</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/Sakshi Tanaji Shintre. Administrative committee .jpg" alt="Sakshi Tanaji Shintre">
+                                    <div class="member-name">Sakshi Tanaji Shintre</div>
+                                    <div class="member-title">Director of Events</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/Rajat Sanjay Tole. Administrative committee .jpg" alt="Rajat Sanjay Tole">
+                                    <div class="member-name">Rajat Sanjay Tole</div>
+                                    <div class="member-title">Director of Events</div>
+                                </div>
                             </div>
-						</section> 
+
+                            <!-- Additional Member Details -->
+                            <h3 class="membership-header2">Additional Current Members</h3>
+                            <div class="membership-content2">
+                                <p>
+                                    <br/>
+                                    <strong>Directors of Events:</strong><br/>
+                                    &bull; &nbsp; Mariam Mamulashvili (semester 3)<br/>
+                                    &bull; &nbsp; Pooja Manoj (semester 5)<br/>
+                                    &bull; &nbsp; Rajdip Bhupatbhai Untavadiya (semester 5)<br/>
+                                    &bull; &nbsp; Twisha Yelakanti (semester 3)<br/>
+                                    <br/>
+                                    <strong>Social Media Team:</strong><br/>
+                                    &bull; &nbsp; Bhavishya Sri Dasari (semester 7)<br/>
+                                    &bull; &nbsp; Diya Mihir Shah (semester 3)<br/>
+                                    &bull; &nbsp; Vaishnav Bangalore Vishnu Vardhana (semester 3)<br/>
+                                    <br/>
+                                    <strong>Director of Collaborations:</strong><br/>
+                                    &bull; &nbsp; Pradnya Kailas Patil (semester 5)<br/>
+                                    &bull; &nbsp; Shubhangi (semester 6)<br/>
+                                    <br/>
+                                    <strong>Volunteer Coordinator:</strong><br/>
+                                    &bull; &nbsp; Shreyas Deepak Patil (semester 10)<br/>
+                                </p>
+                            </div>
+                                
+
+                            <h3 class="membership-header">Membership (2024-25)</h3>
+                            <div class="membership-content">
+                                <p>
+                                  <strong>Head:</strong><br/>
+                                  Salome Oluchukwu Igbokwe (semester 5)<br/><br/>
+                                  <strong>Secretary:</strong><br/> 
+                                  Akhila Suresh Dudam (semester 8)<br/><br/>
+                                  <strong>Administrative Committee:</strong><br/>
+                                  &bull; &nbsp; Dhanashree Subhash Jadhav (semester 8)<br/>
+                                  &bull; &nbsp; Divya Haswani (semester 8)<br/>
+                                  &bull; &nbsp; Ganesh Chandrashekar (semester 8)<br/>
+                                  &bull; &nbsp; Ifreen Imdad Husain Qureshi (semester 8)<br/>
+                                  &bull; &nbsp; Khadija Imran Shaikh (semester 8)<br/>
+                                  &bull; &nbsp; Omkar Angolkar (semester 8)<br/>
+                                  &bull; &nbsp; Sakshi Tanaji Shintre (semester 9)<br/>
+                                  &bull; &nbsp; Shreyas Deepak Patil (semester 8)<br/>
+                                  &bull; &nbsp; Tejal Dnyaneshwar Aivale (semester 2)
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <section style="width: 70%; margin: 0 auto;">
+                            <h3 style="font-size: 1.5rem;">IHI Basic Certificate</h3>
+                            <p>
+                                The <strong>IHI Basic Certificate</strong> is a micro-certification program comprising 13 courses (17.75 total hours), providing a well-rounded introduction to quality, safety, population health, equity, healthcare leadership, and person- and family-centered care. Completing these courses earns users the Safety and Quality Improvement Micro-Credential, equipping students with a solid foundation in quality and safety.
+                            </p>
+                            <h4 style="font-size: 1.2rem; margin-top: 15px;">Benefits of Taking These Courses</h4>
+                            <ul>
+                                <li>&bull; &nbsp; Gain an understanding of patient safety and healthcare quality.</li>
+                                <li>&bull; &nbsp; Boost your leadership skills.</li>
+                                <li>&bull; &nbsp; Enhance and upgrade your resume.</li>
+                                <li>&bull; &nbsp; Be eligible to join our administrative team.</li>
+                            </ul>
+                            <h4 style="font-size: 1.2rem; margin-top: 15px;">Taking the Courses</h4>
+                            <p>
+                                <a href="https://my.ihi.org/topclass/lmsportal.aspx" target="_blank" rel="noopener noreferrer">Register on the website</a> and use our 
+                                <a href="https://docs.google.com/document/d/1zZjSRiJNxrPmsDRkEMKexVElzLFbS6Bi/edit?usp=sharing&ouid=104876726998980960032&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">guide</a> if you need any help.
+                            </p>
+                        </section>
+                        
+                        <section class="big-button-section">
+                            <a href="GAU-Events.html" class="big-button">Click Here for Events</a>
+                        </section>
+                        
+                        <section class="big-button-section">
+                            <a href="#" class="big-button" id="popup-button">Click Here for Patient Safety Research Poster</a>
+                        </section>
+                        
+                        <div id="popup" class="popup-overlay">
+                            <div class="popup-content">
+                                <span id="close-popup" class="close-btn">&times;</span>
+                                <img id="popup-image" src="">
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-            
-        <div class="custom-container2">
-          <div class="image">
-            <img src="images/GAU.jpg" alt="GAU">
-          </div>
-          <div class="text">
-
-            <h3>Membership (2025-26)</h3>
-            <p>
-			<br/><br/>
-			<strong>Head:</strong><br/>
-			Salome Oluchukwu Igbokwe (semester 7)<br/>
-			<br/>
-			<strong>Secretary:</strong><br/> 
-			Akhila Suresh Dudam (semester 10)<br/>
-			<br/>
-			<strong>Administrative Committee:</strong><br/>
-			&bull; &nbsp; Sakshi Tanaji Shintre (semester 11)<br/>
-			<br/>
-			<strong>Directors of Events:</strong><br/>
-			&bull; &nbsp; Dhanashree Subhash Jadhav (semester 10)<br/>
-			&bull; &nbsp; Ifreen Imdad Husain Qureshi (semester 10)<br/>
-			&bull; &nbsp; Mariam Mamulashvili (semester 3)<br/>
-			&bull; &nbsp; Pooja Manoj (semester 5)<br/>
-			&bull; &nbsp; Rajat Sanjay Tole (semester 10)<br/>
-			&bull; &nbsp; Rajdip Bhupatbhai Untavadiya (semester 5)<br/>
-			&bull; &nbsp; Twisha Yelakanti (semester 3)<br/>
-			<br/>
-			<strong>Social Media Team:</strong><br/>
-			&bull; &nbsp; Bhavishya Sri Dasari (semester 7)<br/>
-			&bull; &nbsp; Divya Haswani (semester 10)<br/>
-			&bull; &nbsp; Diya Mihir Shah (semester 3)<br/>
-			&bull; &nbsp; Ganesh Chandrashekar (semester 10)<br/>
-			&bull; &nbsp; Vaishnav Bangalore Vishnu Vardhana (semester 3)<br/>
-			<br/>
-			<strong>Director of Collaborations:</strong><br/>
-			&bull; &nbsp; Pradnya Kailas Patil (semester 5)<br/>
-			&bull; &nbsp; Shreyas Deepak Patil (semester 10)<br/>
-			&bull; &nbsp; Shubhangi (semester 6)<br/>
-			<br/>
-			<strong>Volunteer Coordinator:</strong><br/>
-			&bull; &nbsp; Shreyas Deepak Patil (semester 10)<br/>			
-			</p>
-
-			<br/><br/>
-
-			<span style="color:#808080">
-				<h3>Membership (2024-25)</h3>
-				<p>
-				<br/>
-				Head:<br/>
-				Salome Oluchukwu Igbokwe (semester 5)<br/><br/>
-				Secretary:<br/> 
-				Akhila Suresh Dudam (semester 8)<br/><br/>
-				Administrative Committee:<br/>
-				&bull; &nbsp; Dhanashree Subhash Jadhav (semester 8)<br/>
-				&bull; &nbsp; Divya Haswani (semester 8)<br/>
-				&bull; &nbsp; Ganesh Chandrashekar (semester 8)<br/>
-				&bull; &nbsp; Ifreen Imdad Husain Qureshi (semester 8)<br/>
-				&bull; &nbsp; Khadija Imran Shaikh (semester 8)<br/>
-				&bull; &nbsp; Omkar Angolkar (semester 8)<br/>
-				&bull; &nbsp; Sakshi Tanaji Shintre (semester 9)<br/>
-				&bull; &nbsp; Shreyas Deepak Patil (semester 8)<br/>
-				&bull; &nbsp; Tejal Dnyaneshwar Aivale (semester 2)
-				</p>
-			</span>
-
-          </div>
-        </div>
-
-<!--  EXTRA SECTIONS
-          
-        <div class="custom-container2">
-          <div class="image">
-            <img src="images/pic07.jpg" alt="Description of the image">
-          </div>
-          <div class="text">
-            <h3>Title Goes Here</h3>
-            <p>Your paragraph text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, fermentum orci sit amet, gravida odio.</p>
-          </div>
-        </div>
-
-            <div class="custom-container2">
-          <div class="image">
-            <img src="images/pic07.jpg" alt="Description of the image">
-          </div>
-          <div class="text">
-            <h3>Title Goes Here</h3>
-            <p>Your paragraph text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, fermentum orci sit amet, gravida odio.</p>
-          </div>
-        </div>
-!-->
-
+        
         <script>
-            function goBack() {
-                window.history.back();
-            }
+            document.querySelector('.membership-header2').addEventListener('click', function() {
+              const content = document.querySelector('.membership-content2');
+              if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+              } else {
+                content.style.display = 'none';
+              }
+            });
         </script>
+        
+        <script>
+            document.querySelector('.membership-header').addEventListener('click', function() {
+              const content = document.querySelector('.membership-content');
+              if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+              } else {
+                content.style.display = 'none';
+              }
+            });
+        </script>
+        
+        <script>
+            // Select the second button for Patient Safety Research Poster
+            document.getElementById('popup-button').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                openPopup(); // Open the popup when the button is clicked
+            });
 
+            // Function to open the popup
+            function openPopup() {
+                const popup = document.getElementById('popup');
+                const image = document.getElementById('popup-image');
+
+                // Set the image source for the popup
+                image.src = 'images/Patient safety survey analysis.png'; // Replace with your actual image path
+
+                // Display the popup
+                popup.style.display = 'flex';
+            }
+
+            // Close the popup when the close button is clicked
+            document.getElementById('close-popup').addEventListener('click', function() {
+                document.getElementById('popup').style.display = 'none';
+            });
+
+            // Close the popup when clicking outside the content area
+            window.addEventListener('click', function(event) {
+                if (event.target === document.getElementById('popup')) {
+                    document.getElementById('popup').style.display = 'none';
+                }
+            });
+        </script>
+        
+    </body>
+</html>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>

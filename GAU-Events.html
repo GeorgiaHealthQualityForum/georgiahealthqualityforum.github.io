@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Georgia Health Quality Forum</title>
+        <link rel="stylesheet" href="css/skel-noscript.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-desktop.css">
+        <link rel="stylesheet" href="css/mobile-style.css" media="screen and (max-width: 768px)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="homepage">
+
+        <!-- Header -->
+        <div id="header">
+            <div class="container"> 
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="#">Georgia Health Quality Forum</a></h1>
+                </div>
+                
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="Initiative.html"><span>The Initiative</span></a></li>
+                        <li><a href="Team.html"><span>The Team</span></a></li>
+                        <li><a href="Resources.html"><span>Resources</span></a></li>
+                        <li><a href="Collaborators.html"><span>Collaborators</span></a></li>
+                        <li><a href="Join.html"><span>Join Our Effort</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div id="button">
+            <button onclick="goBack()" class="back-button">Back</button> 
+        </div>
+
+        <!-- Main Content -->
+        <div id="main">
+            <div class="container">
+                <div class="row"> 
+                    <div id="content" class="12u skel-cell-important">
+                        <section>
+                            <header>
+                                <h2 style="line-height: 3rem">Events</h2>
+                            </header>
+
+                            <!-- Upcoming Events Section -->
+                            <section>
+                                <h3>Upcoming Events</h3>
+                            </section>
+
+                            <!-- Past Events Section -->
+                            <section>
+                                <h3>Past Events</h3>
+                                <div class="events-grid">
+                                    <div class="event-item">
+                                        <img src="images/surturing.png" alt="Suturing Competition" class="event-image">
+                                        <h4>Suturing Competition</h4>
+                                        <p><strong>Date:</strong> October 4</p>
+                                        <p>The Knot Battle is an exciting and competitive suturing event designed to test the precision, speed, and technique of medical students and healthcare professionals. Participants will face off in multiple rounds, tackling increasingly complex suturing challenges. This competition is a true test of surgical dexterity, knot-tying mastery, and suturing finesse. <br>
+                                        The competition is a pre-conference event for Surgx24, the international students' surgical conference. Organized by Edugradient.<br>
+                                        <strong>Winners will receive free conference tickets!</strong></p>
+                                    </div>
+                                    
+                                    <div class="event-item">
+                                        <img src="images/webinar.png" alt="WPSD24 Webinar" class="event-image">
+                                        <h4>Webinar: WPSD24</h4>
+                                        <p><strong>Date:</strong> September 18</p>
+                                        <p>In alignment with World Patient Safety Day 2024’s theme, “Improving Diagnosis for Patient Safety,” and under the slogan “Get it right, make it safe!,” we are excited to announce the World Patient Alliance (WPA) webinar on Diagnosis. This event will bring together leading experts, patients, and patient advocates to explore innovative strategies, share best practices, and discuss how we can foster collaboration among healthcare providers, patients, and families to minimize diagnostic errors.</p>
+                                        <p><a href="https://us06web.zoom.us/webinar/register/WN_fuZJqcjAQEupPtORHbuH-w#/registration" target="_blank">Register Here</a></p>
+                                    </div>
+                                    
+                                    <div class="event-item">
+                                        <img src="images/worldbicycleday.png" alt="World Bicycle Day" class="event-image">
+                                        <h4>World Bicycle Day</h4>
+                                        <p><strong>Date:</strong> June 2</p>
+                                        <p>"Cycling for Health, Cycling Towards Europe" - The event highlights the dual benefits of physical activity for personal well-being and environmental sustainability. Since its inception in 2018, Cycling Day has been dedicated to raising awareness about the importance of active transportation and its positive impacts on health and the environment. The march was proudly organized by CCN, the WHO, and the Bicycle Mayor of Tbilisi in collaboration with the IHI student club.</p>
+                                    </div>
+                                    
+                                    <div class="event-item">
+                                        <img src="images/patient.jpg" alt="Navigating Patient Safety" class="event-image">
+                                        <h4>Navigating Patient Safety</h4>
+                                        <p><strong>Date:</strong> May 11</p>
+                                        <p>This workshop aimed to provide valuable insights and skills related to patient safety in healthcare. Students were able to learn more about patient safety through interactive discussions and case studies.</p>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <a href="https://chat.whatsapp.com/L88x5ALLzL33g7cmkxd0aZ" target="_blank" class="join-us-button">Join Us!</a>
+                        </section> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+
+        <style>
+            /* Styling for Events Grid */
+            .events-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin-top: 1.5rem;
+            }
+            .event-item {
+                border: 1px solid #ddd;
+                padding: 1rem;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                overflow: hidden;
+                text-align: center;
+            }
+            .event-image {
+                width: 100%;
+                height: auto;
+                border-radius: 8px 8px 0 0;
+                margin-bottom: 1rem;
+            }
+            .event-item h4 {
+                margin-top: 0.5rem;
+                font-size: 1.2rem;
+            }
+            .join-us-button {
+                display: block; /* Makes it behave like a block element */
+                padding: 1.5rem 3rem;
+                font-size: 2rem; /* Larger font size */
+                font-weight: bold;
+                color: white;
+                background-color: #0073e6;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 8px;
+                width: fit-content; /* Allows the width to adjust to the content size */
+                margin: 2rem auto; /* This ensures centering horizontally */
+                transition: background-color 0.3s ease;
+            }
+
+            /* Hover effect */
+            .join-us-button:hover {
+                background-color: #005bb5;
+            }
+        </style>
+    </body>
+</html>
