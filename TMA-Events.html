@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Georgia Health Quality Forum</title>
+        <link rel="stylesheet" href="css/skel-noscript.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-desktop.css">
+        <link rel="stylesheet" href="css/mobile-style.css" media="screen and (max-width: 768px)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="homepage">
+
+        <!-- Header -->
+        <div id="header">
+            <div class="container"> 
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="#">Georgia Health Quality Forum</a></h1>
+                </div>
+                
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="Initiative.html"><span>The Initiative</span></a></li>
+                        <li><a href="Team.html"><span>The Team</span></a></li>
+                        <li><a href="Resources.html"><span>Resources</span></a></li>
+                        <li><a href="Collaborators.html"><span>Collaborators</span></a></li>
+                        <li><a href="Join.html"><span>Join Our Effort</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div id="button">
+            <button onclick="goBack()" class="back-button">Back</button> 
+        </div>
+
+        <!-- Main Content -->
+        <div id="main">
+            <div class="container">
+                <div class="row"> 
+                    <div id="content" class="12u skel-cell-important">
+                        <section>
+                            <header style="width: 70%; margin: 0 auto; text-align: center;">
+                                <h2 style="line-height: 3rem">TMA Events</h2>
+                            </header>
+
+                            <!-- Upcoming Events Section -->
+                            <section>
+                                 <h3 style="font-size: 1.2rem;">Upcoming Events</h3>
+                                <p>Patient Safety Education Conference for Physicians: December 21, 2024</p>
+                            </section>
+
+                            <!-- Past Events Section -->
+                            <section>
+                                <h3 style="font-size: 1.2rem;">Past Events</h3>
+                                <div class="events-grid">
+                                    <div class="event-item">
+                                        <img src="images/TMA.jpg" alt="MEDIC" class="event-image">
+                                        <h4>MEDIC</h4>
+                                        <p><strong>Date:</strong> November 26 - 28, 2024 </p>
+                                        <p>The "Medicine: Innovations and Challenges 2024" conference is held in a hybrid form and addresses current issues in medicine and healthcare, presenting innovative and interdisciplinary research and their outcomes by international speakers. Patient safety and patient centered care themes are parts of agenda and presented by speakers from Brandenburg University: “Understanding of AI bias – the implications for patient safety”, “CyberPatient – the approach of innovations and challenges”, “HER – Germany experience”, “Evaluation of local large language models for the development of patient safety in oncology”.</p>
+                                    </div>
+                                    <div class="event-item">
+                                        <img src="images/TMAposter.png" alt="WPSD" class="event-image">
+                                        <h4>World Patient Safety Day</h4>
+                                        <p><strong>Date:</strong> September 17, 2024</p>
+                                        <p>What should future doctors know about international patient safety requirements? 
+                                            <p> TMA recently hosted a panel discussion on this topic, where specialists and students engaged in a relevant dialogue.
+                                        </p> 
+                                        <p></p>
+                                        <!-- Button Inside Event Box -->
+                                        <section class="big-button-section">
+                                            <button id="popup-button" class="big-button">Click for Patient Safety Research Posters</button>
+                                        </section>                         
+                                    </div>
+                                    <div class="event-item">
+                                        <img src="images/TMAconferenceMay.png" alt="TMA May Conference" class="event-image">
+                                        <h4>Patient Safety Student Conference</h4>
+                                        <p><strong>Date:</strong> May 27, 2024</p>
+                                        <p>This highly interactive conference aimed to raise awareness about patient safety issues in current clinical practice and generate student understanding on international standards of patient safety. </p>
+                                        <p>After a welcome from the Dean, Prof. Lali Mekokishvili, four physicians presented patient safety cases and moderated interactive discussions after each. Students also shared, analyzed and reflected on their own experience. </p>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup Modal -->
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <button id="close-popup" class="close-popup">X</button>
+                <div class="popup-image-container">
+                    <img id="popup-image" src="" alt="Poster Image" class="popup-image">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Function to go back
+            function goBack() {
+                window.history.back();
+            }
+
+            // Handle popup button click
+            document.getElementById('popup-button').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default behavior
+                openPopup(); // Open the popup
+            });
+
+            // Function to open the popup
+            function openPopup() {
+                const popup = document.getElementById('popup');
+                const image = document.getElementById('popup-image');
+                image.src = 'images/WPSDPosters.png'; // Path to your image
+
+                // Show the popup
+                popup.style.display = 'flex';
+            }
+
+            // Close the popup when clicking on the close button
+            document.getElementById('close-popup').addEventListener('click', function() {
+                document.getElementById('popup').style.display = 'none';
+            });
+
+            // Close the popup when clicking outside the content area
+            window.addEventListener('click', function(event) {
+                if (event.target === document.getElementById('popup')) {
+                    document.getElementById('popup').style.display = 'none';
+                }
+            });
+        </script>
+
+        <style>
+            /* Styling for Events Grid */
+            .events-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin-top: 1.5rem;
+            }
+            .event-item {
+                border: 1px solid #ddd;
+                padding: 1rem;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                overflow: hidden;
+                text-align: center;
+            }
+            .event-image {
+                width: 100%;
+                height: auto;
+                border-radius: 8px 8px 0 0;
+                margin-bottom: 1rem;
+            }
+            .event-item h4 {
+                margin-top: 0.5rem;
+                font-size: 1.2rem;
+            }
+
+            /* Styling for the Popup */
+            .popup-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .popup-content {
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                max-width: 80%;
+                max-height: 80%;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .popup-image-container {
+                width: 100%;
+                height: 500px; /* Set a fixed height for scrolling */
+                overflow: auto; /* Allow scrolling if the image is larger than the container */
+            }
+
+            .popup-image {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .close-popup {
+                background-color: #ff0000;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                font-size: 1.2rem;
+                border-radius: 5px;
+                cursor: pointer;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            .close-popup:hover {
+                background-color: #cc0000;
+            }
+        </style>
+    </body>
+</html>

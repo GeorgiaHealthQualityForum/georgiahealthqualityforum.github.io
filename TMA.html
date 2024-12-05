@@ -7,6 +7,126 @@
         <link rel="stylesheet" href="css/style-desktop.css">
         <link rel="stylesheet" href="css/mobile-style.css" media="screen and (max-width: 768px)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+                    .member-grid {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 20px;
+                        text-align: center;
+                    }
+                    .member {
+                        padding: 10px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                    }
+                    .member img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                    }
+                    .member-name {
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+                    .member-title {
+                        color: #333;
+                    }
+                    .membership-header {
+                      color: #808080;
+                      cursor: pointer;
+                      font-size: 1.2em;
+                      padding: 10px;
+                      margin: 0;
+                      background-color: #f4f4f4;
+                      border: 1px solid #ddd;
+                      text-align: center;
+                    }
+                    .membership-content {
+                      display: none;
+                      padding: 15px;
+                      margin-top: 10px;
+                      background-color: #f9f9f9;
+                      border: 1px solid #ddd;
+                    }
+                    .membership-header2 {
+                      color: #808080;
+                      cursor: pointer;
+                      font-size: 1.2em;
+                      padding: 10px;
+                      margin: 0;
+                      background-color: #f4f4f4;
+                      border: 1px solid #ddd;
+                      text-align: center;
+                    }
+                    .membership-content2 {
+                      display: none;
+                      padding: 15px;
+                      margin-top: 10px;
+                      background-color: #f9f9f9;
+                      border: 1px solid #ddd;
+                    }
+                    .big-button-section {
+                        display: flex;
+                        justify-content: center;
+                        margin: 2rem 0;
+                    }
+
+                    .big-button {
+                        display: inline-block;
+                        padding: 1rem 2rem;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        color: #fff;
+                        background-color: #0073e6;
+                        text-align: center;
+                        text-decoration: none;
+                        border-radius: 8px;
+                        transition: background-color 0.3s ease;
+                    }
+
+                    .big-button:hover {
+                        background-color: #005bb5;
+                    }
+            
+                    .popup-overlay {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 1000;
+                    }
+
+                    /* Popup Content */
+                    .popup-content {
+                        position: relative;
+                        background-color: white;
+                        padding: 20px;
+                        max-width: 90%;
+                        max-height: 90%;
+                        overflow-y: auto;
+                    }
+
+                    /* Close Button */
+                    .close-btn {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        font-size: 2rem;
+                        color: #000;
+                        cursor: pointer;
+                    }
+
+                    /* Image inside the popup */
+                    #popup-image {
+                        width: 100%;
+                        height: auto;
+                    }
+                </style>
     </head>
     <body class="homepage">
 
@@ -14,85 +134,143 @@
 		<div id="header">
 			<div class="container"> 
 				
-				<!-- Logo -->
-				<div id="logo">
-					<h1><a href="#">Georgia Health Quality Forum</a></h1>
-				</div>
-				
-				<nav id="nav">
-                <ul>
-                    <li><a href="index.html"><span>Home</span></a></li>
-                    <li><a href="Initiative.html"><span>The Initiative</span></a></li>
-                    <li><a href="Team.html"><span>The Team</span></a></li>
-                    <li><a href="Resources.html"><span>Resources</span></a></li>
-                    <li><a href="Collaborators.html"><span>Collaborators</span></a></li>
-                    <li><a href="Join.html"><span>Join Our Effort</span></a></li>
-                </ul>
-            </nav>
-        </div>
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="#">Georgia Health Quality Forum</a></h1>
+                </div>
 
-        <div id="button">
-          <button onclick="goBack()" class="back-button">Back</button> 
-        </div>
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="Initiative.html"><span>The Initiative</span></a></li>
+                        <li><a href="Team.html"><span>The Team</span></a></li>
+                        <li><a href="Resources.html"><span>Resources</span></a></li>
+                        <li><a href="Collaborators.html"><span>Collaborators</span></a></li>
+                        <li><a href="Join.html"><span>Join Our Effort</span></a></li>
+                    </ul>
+                </nav>
+            </div>
 
-		<!-- Main -->
-        <div id="main">
-            <div class="container">
-                <div class="row"> 
-                    <!-- Content -->
-                    <div id="content" class="12u skel-cell-important">
-                        <header>
-                          <a href="https://tma.edu.ge/" target="_blank">
-                            <h2 style="line-height: 3rem">Tbilisi Medical Academy</h2>
-                          </a>
-                        </header> 
+            <div id="button">
+              <button onclick="goBack()" class="back-button">Back</button> 
+            </div>
+            <div id="main"> <div class="container"> <div class="row"> <!-- Content --> <div id="content" class="12u skel-cell-important"> <header> 
+                <a href="https://tma.edu.ge/" target="_blank"> <h2 style="line-height: 3rem">Tbilisi Medical Academy</h2> </a> 
+                </header>
+                                <br/><br/>
+                                <p style="font-size: 1.25rem;">Tbilisi Medical Academy was founded in 1992 by notable Georgian physician and pediatric surgeon Petre Shotadze. From its humble beginnings in 1992, more than 31 years TMA is one of the pioneers of medical education in Georgia and remains to be one of the most competitive and dynamically developing institutions.  Since its foundation, TMA has grown to more than 2500 graduates who work successfully in leading Georgian and International Hospitals, Universities, and Scientific Centres.
+                                    <br/><br/>TMA, as a student-oriented higher education institution, primarily seeks to teach and develop national and international healthcare professionals in an innovative manner by using evidence-based knowledge, whilst practically benefiting the community in Georgia through research-based outreach activities. 
+                                    <br/><br/>The main goal of the Academy is to elaborate independent and critical thinking, scientific reasoning abilities, and reasonable judgments among students, to support their development into highly qualified specialists. 
+                                </p>
+
+                        <!-- Membership Section -->
+                        <section>
+                            <br>
+                            <h3 style="font-size: 1.5rem;">TMA Student Co-Directors and Faculty Advisor</h3>
+                           </section>
+                            <div class="member-grid">
+                                <div class="member">
+                                    <img src="images/nanuka%20katchiuri.jpeg" alt="Nanuka Katchiuri">
+                                    <div class="member-name">Nanuka Katchiuri</div>
+                                    <div class="member-title">Student Co-Director</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/mariam%20jorbenadze.jpeg" alt="Mariam Jorbenadze">
+                                    <div class="member-name">Mariam Jorbenadze</div>
+                                    <div class="member-title">Student Co-Director</div>
+                                </div>
+                                <div class="member">
+                                    <img src="images/photo_lela.jpeg" alt="Lela Sturua">
+                                    <div class="member-name">Lela Sturua, MD</div>
+                                    <div class="member-title">Faculty Advisor</div>
+                            </div>
+                                </div>
+                                <br/>
+                            <h4 style="font-size: 1.2rem; margin-top: 15px;">Latest Authorization</h4>
+                                    In September 2024, the National Center For Educational Quality Enhancement, Georgian, and international expert committee granted TMA unconditional authorization for 6 years.  
+                                    This result reflects the commitment of everyone involved and highlights the positive steps we’ve taken as a university. It was a team effort, and this recognition marks an important milestone in the continued journey forward. 
+                                <br/>
+                                </div>
+                            </div>
+                                <br/>
+                            <h4 style="font-size: 1.2rem; margin-top: 15px;">WFME</h4>
+                                    TMA’s educational programs “Medicine” and ''Medicine In English'' are successfully granted full accreditation from the World Federation of Medical Education (WFME), which provides TMA graduates with opportunities for further education and employment in all parts of the world.  
+                                    <br/><br/>
+                            </div>
+                              <section class="big-button-section">
+                            <a href="TMA-Events.html" class="big-button">Click Here for TMA Events</a>
+                        </section>
                         
-                         <div class="custom-container2">
-                          <div class="image">
-                            <img src="images/TMA.jpg" alt="TMA">
-                          </div>
-
-                        <div class="text">
-                          <p>Student Co-Directors&colon;  Nanuka Katchiuri and Mariam Jorbenadze
-                            <br/>Faculty Adviser&colon; Lela Sturua, MD
-                            <br/>
-                            <br/>Our recent events include&colon;
-                          </p>
-                          <p style="margin-left: 40px;">Patient Safety Student Conference, 27 May 2024
-                            <br/>&nbsp; &nbsp; &nbsp; This highly interactive conference aimed to raise awareness about patient safety issues in current clinical practice and generate student understanding on international standards of patient safety.
-                            <br/>&nbsp; &nbsp; &nbsp; After a welcome from the Dean, Prof. Lali Mekokishvili, four physicians presented patient safety cases and moderated interactive discussions after each. Students also shared, analzyed, and reflected on their own experience.
-                          </p>
-                          </div>
+                        <div id="popup" class="popup-overlay">
+                            <div class="popup-content">
+                                <span id="close-popup" class="close-btn">&times;</span>
+                                <img id="popup-image" src="">
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
-            </div>
-        </div>
-
-<!--            
-        <div class="custom-container6">
-          <div class="image">
-			<img class="custom-image" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihb5Qcv4gZl_TH9HjH1MaTdl-0t0IASn4u9g4MVqpr_LC5Jt1nWnQVg8Uo5vjfGYBU0ornWrHNbVWRPhtV4RdVj1OggjIZq0Z3c=w2880-h1412" alt="TMA Image">
-          </div>
-          <div class="text">
-            <h3>Title Goes Here</h3>
-            <p>Your paragraph text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, fermentum orci sit amet, gravida odio.</p>
-          </div>
-        </div>
-
-            <div class="custom-container6">
-          <div class="image">
-			<img class="custom-image" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihb5Qcv4gZl_TH9HjH1MaTdl-0t0IASn4u9g4MVqpr_LC5Jt1nWnQVg8Uo5vjfGYBU0ornWrHNbVWRPhtV4RdVj1OggjIZq0Z3c=w2880-h1412" alt="TMA Image">
-          </div>
-          <div class="text">
-            <h3>Title Goes Here</h3>
-            <p>Your paragraph text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, fermentum orci sit amet, gravida odio.</p>
-          </div>
-        </div>
-!-->
+        
         <script>
-            function goBack() {
-                window.history.back();
-            }
+            document.querySelector('.membership-header2').addEventListener('click', function() {
+              const content = document.querySelector('.membership-content2');
+              if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+              } else {
+                content.style.display = 'none';
+              }
+            });
         </script>
+        
+        <script>
+            document.querySelector('.membership-header').addEventListener('click', function() {
+              const content = document.querySelector('.membership-content');
+              if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+              } else {
+                content.style.display = 'none';
+              }
+            });
+        </script>
+        
+        <script>
+            // Select the second button for Patient Safety Research Poster
+            document.getElementById('popup-button').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                openPopup(); // Open the popup when the button is clicked
+            });
 
+            // Function to open the popup
+            function openPopup() {
+                const popup = document.getElementById('popup');
+                const image = document.getElementById('popup-image');
+
+                // Set the image source for the popup
+                image.src = 'images/Patient safety survey analysis.png'; // Replace with your actual image path
+
+                // Display the popup
+                popup.style.display = 'flex';
+            }
+
+            // Close the popup when the close button is clicked
+            document.getElementById('close-popup').addEventListener('click', function() {
+                document.getElementById('popup').style.display = 'none';
+            });
+
+            // Close the popup when clicking outside the content area
+            window.addEventListener('click', function(event) {
+                if (event.target === document.getElementById('popup')) {
+                    document.getElementById('popup').style.display = 'none';
+                }
+            });
+        </script>
+        
+    </body>
+</html>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
