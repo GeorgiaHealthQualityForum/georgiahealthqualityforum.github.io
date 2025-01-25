@@ -301,6 +301,11 @@ h6 {
          line-height: 1.5;
          font-size: 0.5rem ;
 	} 
+
+    #logo h1 a
+    {
+         color: white;  
+    }
 	
 	#nav
 	{
