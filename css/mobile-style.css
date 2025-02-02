@@ -695,24 +695,35 @@ h6 {
         width: 100% !important;
     }
 
-    .custom-section {
-        display: inline-block !important; /* Make sections inline-block to align them horizontally */
-        text-align: center !important; /* Reset text-align to left for sections */
-        margin-bottom: 0;
-        width: 100% !important;
-        align-content: center;
-
+ .custom-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
     }
 
     .custom-heading {
-        margin-bottom: 0 !important; /* Remove default margin-bottom for h6 */
-        font-size: 1.5rem !important; /* Set font size for h6 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
     }
 
     .custom-image {
-        vertical-align: middle !important; /* Align images vertically in the middle */
-        width: 50px !important; /* Set width for images */
-        height: auto !important; /* Maintain aspect ratio for images */
-        margin-right: 10px !important; /* Add margin to the right of images *
-        }
+        width: 100%;
+        max-width: 200px; /* Adjust as needed */
+        height: auto;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .collaborator-button {
+        display: block;
+        width: fit-content;
+        margin-top: 10px;
+    }
+
     
+   
