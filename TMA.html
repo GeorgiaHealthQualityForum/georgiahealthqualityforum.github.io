@@ -18,9 +18,11 @@
                 padding: 10px;
             }
             .member img {
-                width: 50%; /* Images are 50% smaller */
-                height: auto;
+                width: 50%; /* Maintain same width */
+                height: 300px; /* Set a fixed height */
+                object-fit: cover; /* Ensures uniform size while keeping aspect ratio */
                 margin: 0 auto;
+            }            
             }
             .member-name {
                 font-weight: bold;
