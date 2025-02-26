@@ -394,24 +394,29 @@ h6 {
     } 
 
     .custom-container2 {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        padding: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 100px;
+    max-width: 100%;
+    overflow: hidden;
     }
 
     .custom-container2 .image {
-        flex: 0 0 auto; 
-        margin-right: 60px; 
+        flex: 0 0 auto;
+        margin-right: 60px;
         max-width: calc(100vw / 6);
     }
 
     .custom-container2 .text {
         font-size: 1.25rem;
-        flex: 1; 
+        flex: 1;
         text-align: justify;
         text-justify: inter-word;
-    } 
+        word-wrap: break-word;
+        max-width: 100%;
+    }
 
     .custom-container3 {
         display: flex;

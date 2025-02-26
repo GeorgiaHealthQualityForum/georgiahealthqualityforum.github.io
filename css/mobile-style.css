@@ -421,10 +421,13 @@ h6 {
     } 
 
     .custom-container2 {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        padding: 25px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 25px;
+    max-width: 100%;
+    overflow: hidden;
     }
 
     .custom-container2 .image {
@@ -433,10 +436,12 @@ h6 {
 
     .custom-container2 .text {
         font-size: 1.25rem;
-        flex: 1; 
         text-align: left;
         text-justify: inter-word;
-    } 
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+
 
     .custom-container3 {
         display: flex;
