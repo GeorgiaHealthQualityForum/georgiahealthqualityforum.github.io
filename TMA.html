@@ -18,11 +18,13 @@
                 padding: 10px;
             }
             .member img {
-                width: 50%; /* Maintain same width */
-                height: 300px; /* Set a fixed height */
-                object-fit: cover; /* Ensures uniform size while keeping aspect ratio */
+                width: 100%; /* Use full container width */
+                max-width: 300px; /* Prevent excessive stretching on larger screens */
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover; /* Ensures proper cropping */
+                display: block;
                 margin: 0 auto;
-            }            
+            }           
             }
             .member-name {
                 font-weight: bold;
